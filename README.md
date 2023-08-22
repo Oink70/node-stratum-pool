@@ -215,7 +215,7 @@ var pool = Stratum.createPool({
             "::ffff:192.128.0.2"
         ]
     },
-    /* If a worker wallet address found in the banned Wallet address, socket connection will be closed.*/
+    /* If a worker wallet address found in the banned Wallet address list, socket connection will be closed.*/
     "banningWalletAddress": {
         "enabled": true,
         "time": 600, //How many seconds to ban worker for
@@ -224,6 +224,17 @@ var pool = Stratum.createPool({
             // List of Wallet address to ban.
             "RfdjRJEKJKJRkdafjskjkj....2",
             "RfdjRJEKJKJRkdafjskjkj...1"
+        ]
+    },
+    /* If a worker name found in the banned worker name list, socket connection will be closed.*/
+    "banningWorkerName": {
+        "enabled": true,
+        "time": 600, //How many seconds to ban worker for
+        "purgeInterval": 300 //Every this many seconds clear out the list of old bans
+        "banned": [
+            // List of worker names to ban.
+            "RfdjRJEKJKJRkdafjskjkj2.workername",
+            "RfdjRJEKJKJRkdafjskjkj1.workername"
         ]
     },
 
