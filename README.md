@@ -209,6 +209,24 @@ var pool = Stratum.createPool({
         "invalidPercent": 50, //What percent of invalid shares triggers ban
         "checkThreshold": 500, //Check invalid percent when this many shares have been submitted
         "purgeInterval": 300 //Every this many seconds clear out the list of old bans
+        "banned": [
+            // List of IP addresses to ban. The prefix ::ffff: is required
+            "::ffff:192.128.0.1",
+            "::ffff:192.128.0.2"
+        ]
+    },
+    /* If a worker wallet address found in the banned Wallet address, socket connection will closed.*/
+    "banningWalletAddress": {
+        "enabled": true,
+        "time": 600, //How many seconds to ban worker for
+        "invalidPercent": 50, //What percent of invalid shares triggers ban
+        "checkThreshold": 500, //Check invalid percent when this many shares have been submitted
+        "purgeInterval": 300 //Every this many seconds clear out the list of old bans
+        "banned": [
+            // List of Wallet address to ban.
+            "RfdjRJEKJKJRkdafjskjkj....2",
+            "RfdjRJEKJKJRkdafjskjkj...1"
+        ]
     },
 
     /* Each pool can have as many ports for your miners to connect to as you wish. Each port can
