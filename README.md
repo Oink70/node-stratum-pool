@@ -219,8 +219,6 @@ var pool = Stratum.createPool({
     "banningWalletAddress": {
         "enabled": true,
         "time": 600, //How many seconds to ban worker for
-        "invalidPercent": 50, //What percent of invalid shares triggers ban
-        "checkThreshold": 500, //Check invalid percent when this many shares have been submitted
         "purgeInterval": 300 //Every this many seconds clear out the list of old bans
         "banned": [
             // List of Wallet address to ban.
