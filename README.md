@@ -215,7 +215,7 @@ var pool = Stratum.createPool({
             "::ffff:192.128.0.2"
         ]
     },
-    /* If a worker wallet address found in the banned Wallet address, socket connection will closed.*/
+    /* If a worker wallet address found in the banned Wallet address, socket connection will be closed.*/
     "banningWalletAddress": {
         "enabled": true,
         "time": 600, //How many seconds to ban worker for
